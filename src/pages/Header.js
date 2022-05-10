@@ -1,15 +1,21 @@
-import {Outlet, Link} from "react-router-dom"
+import { Outlet, Link } from "react-router-dom"
 
-const Header = () =>{
+const Header = () => {
     return (
-        <div>
-            <h1>LandDoc</h1>
+        <div className='header'>
+            <div className='logo'>
+                <a href="#/"><img src={require('../logo.png') } alt=''/></a>
+            </div>
             <nav>
-                <Link to="/"> Home </Link>
-                <Link to="/login"> Login </Link>
-                <Link to="/SignUp"> SignUp </Link>
+                <Link to='/'> Home </Link>
+                <Link to='/'>Knowledge Centre</Link>
+                <Link to='/'>FAQ's</Link>
+                <Link to='/'>Gallery</Link>
+                <Link to='/'>Ask a Legal Expert</Link>
+                <Link to="/login">Login</Link>
+                <button className='create-ac'>Create Account</button>
             </nav>
-            <Outlet/>
+            <Outlet />
         </div>
     )
 }
